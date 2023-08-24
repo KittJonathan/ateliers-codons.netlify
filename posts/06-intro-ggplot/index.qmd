@@ -193,7 +193,7 @@ g +
   geom_point(aes(col = espece))
 ```
 
-Une légende permettant de différencier les gorupes a été ajoutée à droite du graphique.
+Une légende permettant de différencier les groupes a été ajoutée à droite du graphique.
 
 <br>
 
@@ -253,7 +253,7 @@ g +
 
 <br>
 
-L'argument `size` permet de modificer la taille des points. Là encore, nous pouvons définir une même taille pour l'ensemble des points, ou représenter une variable continue de nos données à l'aide de la taille.
+L'argument `size` permet de modifier la taille des points. Là encore, nous pouvons définir une même taille pour l'ensemble des points, ou représenter une variable continue de nos données à l'aide de la taille.
 
 Augmentons la taille de l'ensemble des points :
 
@@ -354,7 +354,11 @@ ggplot(data = pingouins,
 
 <br>
 
+<<<<<<< HEAD
 Cet histogramme ne nous renseigne sur la distribution de notre variable d'intérêt en fonction de l'espèce. Nous allons pour cela ajouter de la couleur à nos barres :
+=======
+Cet histogramme ne nous renseigne pas sur la distribution de notre variable d'intérêt en fonction de l'espèce. Nous allons pour cela ajouter de la couleur à nos barres :
+>>>>>>> b905b1667d3e76c272b47bdb82e4228505653cdb
 
 ```{r basic plot 17, eval=TRUE, message=FALSE, warning=FALSE}
 ggplot(data = pingouins,
@@ -408,7 +412,7 @@ ggplot(data = pingouins,
 
 Ajoutons des titres à notre graphique et modifions les titres des axes :
 
-```{r basic plot 18d, eval=TRUE, message=FALSE, warning=FALSE, echo=FALSE}
+```{r basic plot 18d, eval=TRUE, message=FALSE, warning=FALSE, echo=TRUE}
 ggplot(data = pingouins,
        aes(x = masse_corporelle_g)) +
   geom_histogram(aes(fill = espece),
@@ -502,7 +506,7 @@ ggplot(data = pingouins,
            show.legend = FALSE)
 ```
 
-Nous aimerions classer les espèces apr ordre décroissant de nombre d'individus. Pour cela, nous allons utliser la fonction `fct_infreq()` du package `{forcats}` qui permet de trier les niveaux d'un facteur. Cette approche est intéressante car elle est dynamique : R effectue directement le tri dans passer par un objet intermédiaire.
+Nous aimerions classer les espèces par ordre décroissant de nombre d'individus. Pour cela, nous allons utliser la fonction `fct_infreq()` du package `{forcats}` qui permet de trier les niveaux d'un facteur. Cette approche est intéressante car elle est dynamique : R effectue directement le tri sans passer par un objet intermédiaire.
 
 ```{r basic plot 20b, eval=TRUE, message=FALSE, warning=FALSE}
 ggplot(data = pingouins,
@@ -745,7 +749,7 @@ pingouins %>%
   scale_fill_brewer(palette = "Accent")
 ```
 
-Il existe beaucoup d'autres palettes, accessibles via des packages, dont la liste est [accessible ici](https://github.com/EmilHvitfeldt/r-color-palettes).
+Il existe beaucoup d'autres palettes, disponibles via des packages, dont la liste est [accessible ici](https://github.com/EmilHvitfeldt/r-color-palettes).
 
 <br>
 
@@ -1040,7 +1044,11 @@ La fonction `element_blank()` permet de supprimer un élément du graphique.
 Nous allons effectuer les modifications suivantes :
 
 |                                       |                                      |
+<<<<<<< HEAD
 |---------------------------------------|--------------------------------------|
+=======
+|------------------------------------|-----------------------------------|
+>>>>>>> b905b1667d3e76c272b47bdb82e4228505653cdb
 | modifier la couleur de l'arrière-plan | `panel.background = element_rect()`  |
 | modifier la couleur de la bordure     | `panel.border = element_rect()`      |
 | supprimer les graduations mineures    | `panel.grid.minor = element_blank()` |
@@ -1076,7 +1084,11 @@ La fonction `margin()` peut également être utilisée pour modifier les marges 
 Nous allons effectuer les modifications suivantes :
 
 |                                       |                                    |
+<<<<<<< HEAD
 |---------------------------------------|------------------------------------|
+=======
+|-------------------------------------|-----------------------------------|
+>>>>>>> b905b1667d3e76c272b47bdb82e4228505653cdb
 | modifier la couleur de l'arrière-plan | `plot.background = element_rect()` |
 | augmenter les marges                  | `plot.margin = margin()`           |
 | modifier le titre                     | `plot.title = element_text()`      |
